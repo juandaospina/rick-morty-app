@@ -1,5 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Characters } from '../types';
 
 @Injectable({
   providedIn: 'root',
@@ -9,6 +10,6 @@ export class DataService {
   private _http = inject(HttpClient);
 
   getAllCharacters() {
-    return this._http.get<any>('https://rickandmortyapi.com/api/character');
+    return this._http.get<Characters>('https://rickandmortyapi.com/api/character');
   }
 }

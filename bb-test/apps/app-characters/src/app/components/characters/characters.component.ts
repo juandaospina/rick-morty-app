@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from '../../services/data-service';
 
 @Component({
-  standalone: true,
+  // standalone: true,
   selector: 'app-characters',
   templateUrl: './characters.component.html',
     styleUrls: ['./characters.component.scss'],
@@ -13,7 +13,7 @@ export class CharactersComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.getAllCharacters().subscribe(data => {
-      console.log("CHARACTERS_DATA", data.res);
+      console.log("[characters]", data.results)
       this.characters = data.results;
     })
   }

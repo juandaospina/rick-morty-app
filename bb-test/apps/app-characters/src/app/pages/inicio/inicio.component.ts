@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 
-import { PruebaComponent } from '../../components/prueba/prueba.component';
 import { CharactersComponent } from '../../components/characters/characters.component';
+import { ComponentsModule } from '../../components/components.module';
 
 @Component({
   standalone: true,
-  imports: [PruebaComponent, CharactersComponent],
+  imports: [ComponentsModule],
   selector: 'bb-test-inicio',
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.scss'],

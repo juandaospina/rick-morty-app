@@ -1,37 +1,9 @@
 <section class="results">
-  <div class="results__top">
-    <p>5 Results</p>
-  </div>
-  <div class="results__cards">
-      <div class="card">
-        <figure>
-          <img src="../../../assets/walter.png" alt="" />
-        </figure>
-        <img src="" alt="" />
-        <div class="mini_card">
-          <div class="mini_card__content">
-            <p class="mini_cardName">Walter White</p>
-            <p class="mini_cardNick">Heisenberg</p>
-            <hr />
-            <p class="mini_cardLabel">Ocupation</p>
-            <p class="mini_cardOcupation">High School Chemistry Teacher</p>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <figure>
-          <img src="../../../assets/walter.png" alt="" />
-        </figure>
-        <img src="" alt="" />
-        <div class="mini_card">
-          <div class="mini_card__content">
-            <p class="mini_cardName">Walter White</p>
-            <p class="mini_cardNick">Heisenberg</p>
-            <hr />
-            <p class="mini_cardLabel">Ocupation</p>
-            <p class="mini_cardOcupation">High School Chemistry Teacher</p>
-          </div>
-        </div>
-      </div>
-</div>
+  <!-- <div class="results__top"></div>
+  <div class="results__cards"></div> -->
+  <app-character-card
+    *ngFor="let character of characters"
+    [character]="character"
+  ></app-character-card>
 </section>
+
