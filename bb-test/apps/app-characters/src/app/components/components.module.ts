@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
+
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
+
 import { CharacterCardComponent } from './character-card/character-card.component';
-import { CharactersComponent } from './characters/characters.component';
+import { CharactersComponent } from './characters-list/characters-list.component';
 
 @NgModule({
   declarations: [CharacterCardComponent, CharactersComponent],
-  imports: [CommonModule],
+  imports: [CommonModule, InfiniteScrollModule, NgOptimizedImage],
   exports: [CharactersComponent],
 })
 export class ComponentsModule {}
