@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { DataService } from '../../services/data-service';
 import { Info, Result } from '../../types';
@@ -10,20 +10,20 @@ import { enviroments } from '../../enviroments';
   templateUrl: './characters-list.component.html',
   styleUrls: ['./characters-list.component.scss'],
 })
-export class CharactersComponent implements OnInit {
-  constructor(private dataService: DataService) {}
-  public apiResult!: Info;
-  public characters: Result[] = [];
+export class CharactersListComponent {
+  @Input() apiResult!: Info;
+  @Input() characters!: Result[];
+  @Input() public name: string = 'Juan Ospina';
   public page: number = 0;
+  constructor(private dataService: DataService) {}
 
-  ngOnInit(): void {
-    const url = `${enviroments.apiUrl}/?page=1`;
-    this.dataService.getAllCharacters(url).subscribe((data) => {
-      console.log('[characters]', data.results);
-      this.apiResult = data.info;
-      this.characters = data.results;
-    });
-  }
+  // ngOnInit(): void {
+  //   const url = `${enviroments.apiUrl}/?page=1`;
+  //   this.dataService.getAllCharacters(url).subscribe((data) => {
+  //     this.apiResult = data.info;
+  //     this.characters = data.results;
+  //   });
+  // }
 
   onHandlerScroll() {
     if (this.apiResult.next) {

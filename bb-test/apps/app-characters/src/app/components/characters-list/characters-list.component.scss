@@ -1,6 +1,8 @@
 .results {
   // border: 1px solid red;
   display: grid;
+  // justify-content: center;
+  margin: 0 auto;
   gap: 70px;
   padding: 20px;
   @media screen and (min-width: 420px) {

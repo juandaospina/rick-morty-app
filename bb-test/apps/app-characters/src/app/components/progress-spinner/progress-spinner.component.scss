@@ -1,0 +1,7 @@
+.progress {
+  border: 1px solid red;
+}
+
+::ng-deep .mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
+  stroke: #e1e2e5;
+}

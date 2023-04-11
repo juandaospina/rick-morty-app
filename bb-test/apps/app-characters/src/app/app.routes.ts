@@ -1,9 +1,9 @@
 import { Route } from '@angular/router';
-import { InicioComponent } from './pages/inicio/inicio.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export const appRoutes: Route[] = [
   {
     path: '',
-    component: InicioComponent,
+    component: HomeComponent,
   },
 ];
