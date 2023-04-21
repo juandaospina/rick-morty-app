@@ -1,8 +1,9 @@
 <section
   class="results"
   infiniteScroll
-  [infiniteScrollDistance]="2"
-  [infiniteScrollThrottle]="50"
+  [infiniteScrollDistance]="4"
+  [infiniteScrollThrottle]="100"
+  [infiniteScrollDisabled]="blockInfiniteScroll"
   (scrolled)="onHandlerScroll()"
 >
   <app-character-card
